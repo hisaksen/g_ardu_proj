@@ -12,7 +12,7 @@ void setup(){
   Serial.begin(9600);
   if (!SD.begin(SD_ChipSelectPin)) {
    Serial.println("SD fail");
-exit error(code);
+exit error(1);
 }
 tmrpcm.setVolume(6); // max volume is 7
 tmrpcm.play(wave);
