@@ -14,7 +14,7 @@ if (!SD.begin(SD_ChipSelectPin)) {
 Serial.println("SD fail");
 return;
 }
-tmrpcm.setVolume(6);
+tmrpcm.setVolume(6); // max volume is 7
 tmrpcm.play(wave);
 }
 
