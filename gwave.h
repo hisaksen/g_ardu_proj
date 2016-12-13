@@ -3,19 +3,20 @@
 #include "TMRpcm.h"
 #include "SPI.h"
 
-TMRpcm tmrpcm;
+TMRpcm audio;
 
 char wave[] = "gwave.wav";
 
 void setup(){
-tmrpcm.speakerPin = 9;
-Serial.begin(9600);
+  audio.speakerPin = 10; //5,6,11 or 46 on Mega, 9 on Uno, Nano, etc  
+  Serial.begin(9600);
+  
 if (!SD.begin(SD_ChipSelectPin)) {
-Serial.println("SD fail");
+  Serial.println("SD fail");
 return;
 }
-tmrpcm.setVolume(6);
-tmrpcm.play(wave);
+audio.setVolume(6);
+audio.play(wave);
 }
 
 void loop(){  }
