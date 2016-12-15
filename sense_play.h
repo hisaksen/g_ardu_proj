@@ -15,7 +15,8 @@ int val = 0;                    // Instantiate PIN reading
 void setup() {
   pinMode(ledPin, OUTPUT);      // LED as Output
   pinMode(inputPin, INPUT);     // Sensor as Input
-
+ 
+  tmrpcm.setVolume(6);          // Set volume for speaker(Max 7)
   tmrpcm.speakerPin = 9;        //Set speaker pin
 
   if (!SD.begin(SD_ChipSelectPin)) {
@@ -39,7 +40,6 @@ void loop(){
     digitalWrite(ledPin, LOW); // turn LED OFF
     if (pirState == HIGH){
       // we have just turned of
-      tmrpcm.setVolume(6);     // Set volume for speaker(Max 7)
       tmrpcm.play(wave);       // Play wav file
       Serial.println("Motion ended!"); // open arduino IDE serial monitor
       // We only want to print on the output change, not state
