@@ -9,7 +9,7 @@ int val = 0;                    // Instantiate PIN reading
 void setup() {
   pinMode(ledPin, OUTPUT);      // LED as Output
   pinMode(inputPin, INPUT);     // Sensor as Input
- 
+
   Serial.begin(9600);
 }
  
