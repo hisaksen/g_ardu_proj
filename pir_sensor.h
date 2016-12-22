@@ -2,7 +2,7 @@
  */
  
 int ledPin = 13;                // Using Arduino Uno's built in LED to test sensor
-int inputPin = 2;               // PIR sensor PIN
+int inputPin = 3;               // PIR sensor PIN
 int pirState = LOW;             // Motion detection starts at off
 int val = 0;                    // Instantiate PIN reading
  
