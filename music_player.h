@@ -7,7 +7,7 @@ TMRpcm audio;
 
 char wave[] = "gwave.wav";
 
-int inputPin = 2;               // PIR sensor PIN
+int inputPin = 3;               // PIR sensor PIN
 int pirState = LOW;             // Motion detection starts at off
 int val = 0;
 int delayReading = 0; 
