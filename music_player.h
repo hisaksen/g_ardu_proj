@@ -44,5 +44,4 @@ void loop(){
   else { 
       delayReading = 0; 
   }
-  }
 }
