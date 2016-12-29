@@ -5,7 +5,7 @@
 
 TMRpcm audio;
 
-char wave[] = "gwave.wav";
+char wave[] = "filter.wav";
 
 int inputPin = 3;               // PIR sensor PIN
 int pirState = LOW;             // Motion detection starts at off
@@ -15,13 +15,13 @@ int personDetected = 1;
 int audioInProgress = 0;
 
 void setup() {
-  audio.speakerPin = 10; //5,6,11 or 46 on Mega, 9 on Uno, Nano, etc
+  audio.speakerPin = 9; //5,6,11 or 46 on Mega, 9 on Uno, Nano, etc
   pinMode(inputPin, INPUT);     // Sensor as Input
   if (!SD.begin(SD_ChipSelectPin)) {
     Serial.println("SD fail");
     return;
   }
-  audio.setVolume(6);
+  audio.setVolume(5);
   Serial.begin(9600);
   
 }
